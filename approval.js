@@ -1,19 +1,32 @@
-var approval = document.getElementById("approval");
+
 var client = getUrlVars();
 
 var age;
-var name = paragraphGenerator('Congratulations, '  + client['name'] + ' , you have been approved!'); 
-if (age > 65)
-    age = paragraphGenerator('You are old' + client['age'] + ', you should retire!'); 
+if (client['age'] > 65)
+    age = paragraphGenerator('Congratulations! You are ready to retire ' + client['name'] + ', you have been approved for our retirement plans!'); 
+
+else
+    age = paragraphGenerator('You are not eligible for our retirement plans, ' + client['name'] + ' , but there are other plans that you may qualify for!');
+
+
+
+var accountNumber;
+var retired;
+var married;
+nameGenerator (client['name']);
+
+if (married = false)
+    married = paragraphGenerator('You do not qualify for our marriage bonus offers.');
 
 else 
-    age = paragraphGenerator('You are a baby' + client['age'] + ', you should go to work!');
+    married = paragraphGenerator('You qualify for our bonus offers for married couples!');
 
-var accountNumber
+var employed;
 
-var retired
-var married
-var employed
+function nameGenerator(text){
+   
+    return document.getElementById('name').innerHTML = text;
+} 
 
 
 
@@ -22,9 +35,8 @@ var employed
 
 
 function paragraphGenerator(text){
-    var para = document.createElement('p');
-    para.innerHTML = text;
-    return approval.appendChild(para);
+    
+    return document.getElementById("approval").innerHTML = text;
 } 
 
 

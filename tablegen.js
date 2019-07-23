@@ -2,9 +2,10 @@ var table = document.getElementById("Mock_Data");
 
 
 
-function addRow(client) {
+function addRow(client, alt) {
     var table = document.getElementById("Mock_Data");
     var row = table.insertRow(-1);
+    if (alt) row.className = 'alt';
     var cellName = row.insertCell(0);
     var cellAge = row.insertCell(1);
     var cellAccountNumber = row.insertCell(2);
@@ -24,7 +25,8 @@ function addRow(client) {
     cellApprovalLetter.innerHTML = '<a href= "' + linkApproval.href + '">' + linkApproval.title + '</a>';   
 }
 for (var i = 0; i < clients.length; i++){
-    addRow(clients[i]);
+    addRow(clients[i], i % 2 === 0);
+
 }
 
 
