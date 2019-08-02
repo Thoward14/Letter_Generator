@@ -15,11 +15,18 @@ var retired;
 var married;
 nameGenerator (client['name']);
 
-if (married = false)
+
+
+
+
+if (married['name'] = false) 
     married = paragraphGenerator('You do not qualify for our marriage bonus offers.');
 
-else 
+else
     married = paragraphGenerator('You qualify for our bonus offers for married couples!');
+
+
+
 
 var employed;
 

@@ -27,7 +27,7 @@ function addRow(client, alt) {
 for (var i = 0; i < clients.length; i++){
     addRow(clients[i], i % 2 === 0);
 
-}
+} 
 
 
 
